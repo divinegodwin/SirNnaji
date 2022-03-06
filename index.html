@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="res/bootstrap@5.0.0-alpha2.min.css">
+    <link rel="stylesheet" href="res/chartist.min.css">
+    <link rel="stylesheet" href="res/style.css" type="" />
+    
+    <style>
+      *{
+  padding:0;
+  margin:0;
+}
+
+body{
+  width:100vw;
+  height:100vh;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(to right,#173a33,#1d4838);
+}
+
+.main{
+  width: 100%;
+  height:100%;
+}
+
+.input .h3{
+  color:#216955;
+  font-weight: 600;
+}
+
+.em1 input{
+  background-color: transparent;
+  border:1px solid #216955;
+  width:100%;
+  padding:5px;
+  margin-top: 15px;
+  border-radius: 4px;
+  color: #47B091;
+}
+.r{
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.d-up{
+  width:40%;
+  padding:5px;
+  border:none;
+  color:white;
+  background:#1d4838;
+  outline:none;
+}
+.grid{
+  display: grid;
+  grid-template-columns: 47% 5% 47%;
+}
+.tb1{
+  width: 100%;
+  /*height:250px;*/
+  border: 1px solid #216955;
+}
+.tb1 .header{
+  border-bottom: 1px solid #216955;
+  padding: 5px;
+  color:#4BAA8E;
+  background-color: #173a33;
+  text-transform: uppercase
+}
+.wc1{
+  display: grid;
+  grid-template-columns: 60% 40%;
+  border-bottom: 1px solid #216955;
+}
+.wc1 .wcn1,.wcn2,.wcn3,.wcn4,.wcn5,.dcn1,.dcn2,.dcn3,.dcn4,.dcn5{
+  color:#fff;
+  font-size: 16px;
+}
+.wc1 .wca1,.wca2,.wca3,.wca4,.wca5{
+  color:#4BAA8E;
+  font-size: 16px;
+  font-weight: 600;
+  width :100%;
+}
+.wc1 .wca1 span,wca2 span,wca3 span,wca4 span,wca5 span{
+  float: right;
+}
+    </style>
+    
+</head>
+<body>
+  <div class="main">
+    <div class="input p-3">
+      
+      <div class="row r">
+        
+        
+        <div class="col-lg-6 col-sm-12">
+          <br/>
+          <div class="h3">
+            Last Deposit Input..
+          </div>
+          <div class="em1">
+            <div class="row">
+              <div class="col-6 name">
+                <input type="text" id="dn1" value="" placeholder="Depositors name"  />
+                <input type="text" id="dn2" value="" placeholder="Depositors name" />
+                <input type="text" id="dn3" value="" placeholder="Depositors name" />
+                <input type="text" id="dn4" value="" placeholder="Depositors name" />
+                <input type="text" id="dn5" value="" placeholder="Depositors name" />
+              </div>
+              
+ <div class="col-6 name">
+                <input type="text" id="da1" value="" placeholder="Depositors amount" />
+                <input type="text" id="da2" value="" placeholder="Depositors amount"  />
+                <input type="text" id="da3" value="" placeholder="Depositors amount"  />
+                <input type="text" id="da4" value="" placeholder="Depositors amount"  />
+                <input type="text" id="da5" value="" placeholder="Depositors amount"  />
+              </div>
+
+
+
+            </div><br />
+            <button type="submit" class="d-up" id="dep">Upload</button>
+          </div>
+        </div>
+        
+        
+        
+          <div class="col-lg-6 col-sm-12">
+            <br />
+          <div class="h3">
+            Last Withdrawal Input..
+          </div>
+          <div class="em1">
+            <div class="row">
+              <div class="col-6 name">
+                <input type="text" id="wn1" value="" placeholder="Withdrawal name" />
+                <input type="text" id="wn2" value="" placeholder="Withdrawal name" />
+                <input type="text" id="wn3" value="" placeholder="Withdrawal name" />
+                <input type="text" id="wn4" value="" placeholder="Withdrawal name" />
+                <input type="text" id="wn5" value="" placeholder="Withdrawal name" />
+              </div>
+              
+ <div class="col-6 name">
+                <input type="text" id="wa1" value="" placeholder="Withdrawal amount" />
+                <input type="text" id="wa2" value="" placeholder="Withdrawal amount"/>
+                <input type="text" id="wa3" value="" placeholder="Withdrawal amount"/>
+                <input type="text" id="wa4" value="" placeholder="Withdrawal amount"/>
+                <input type="text" id="wa5" value="" placeholder="Withdrawal amount"/>
+              </div>
+
+
+
+            </div>
+            <br />
+            <button type="submit" class="d-up" id="wit">Upload</button>
+          </div>
+        </div>
+        
+        
+      </div>
+      
+    </div>
+    
+    <div class="grid p-3 mt-5">
+      
+      <div class="tb1">
+        <div class="header"><div class="h4">$ Last Deposit</div></div>
+        
+        <div class="wc1 p-3">
+          <div class="dcn1"></div>
+          <div class="wca1"><span id="dca1"></span></div>
+        </div>
+        
+
+<div class="wc1 p-3">
+          <div class="dcn2"></div>
+          <div class="wca1"><span id="dca2"></span></div>
+        </div>
+        
+        
+        <div class="wc1 p-3">
+          <div class="dcn3"></div>
+          <div class="wca1"><span id="dca3"></span></div>
+        </div>
+        
+
+<div class="wc1 p-3">
+          <div class="dcn4"></div>
+          <div class="wca1"><span id="dca4"></span></div>
+        </div>
+        
+        
+        
+       <div class="wc1 p-3">
+          <div class="dcn5"></div>
+          <div class="wca1"><span id="dca5"></span></div>
+        </div>
+        
+        
+      </div>
+     
+      
+      <div>
+        
+      </div>
+      
+       <div class="tb1">
+        <div class="header"><div class="h4">$ Last Withdrawal</div></div>
+        
+        <div class="wc1 p-3">
+          <div class="wcn1"></div>
+          <div class="wca1"><span id="wca1"></span></div>
+        </div>
+        
+           <div class="wc1 p-3">
+          <div class="wcn2"></div>
+          <div class="wca1"><span id="wca2"></span></div>
+        </div>
+        
+        
+           <div class="wc1 p-3">
+          <div class="wcn3"></div>
+          <div class="wca1"><span id="wca3"></span></div>
+        </div>
+        
+        
+           <div class="wc1 p-3">
+          <div class="wcn4"></div>
+          <div class="wca1"><span id="wca4"></span></div>
+        </div>
+        
+        
+           <div class="wc1 p-3">
+          <div class="wcn5"></div>
+          <div class="wca1"><span id="wca5"></span></div>
+        </div>
+        
+        
+        
+        
+        
+      </div>
+      
+    </div>
+    
+  </div>
+  
+  <script>
+    document.querySelector("#dep").addEventListener('click',()=>{
+  document.querySelector(".dcn1").innerHTML=document.querySelector("#dn1").value + "**";
+  
+  document.querySelector(".dcn2").innerHTML=document.querySelector("#dn2").value + "**";
+  
+    document.querySelector(".dcn3").innerHTML=document.querySelector("#dn3").value +"**";
+    
+    document.querySelector(".dcn4").innerHTML=document.querySelector("#dn4").value +"**";
+    
+
+document.querySelector(".dcn5").innerHTML=document.querySelector("#dn5").value +"**";
+
+
+document.querySelector("#dca1").innerHTML="$" + document.querySelector("#da1").value + ".00";
+
+document.querySelector("#dca2").innerHTML="$" + document.querySelector("#da2").value + ".00";
+
+document.querySelector("#dca3").innerHTML="$" + document.querySelector("#da3").value + ".00";
+
+document.querySelector("#dca4").innerHTML="$" + document.querySelector("#da4").value + ".00";
+
+document.querySelector("#dca5").innerHTML="$" + document.querySelector("#da5").value + ".00";
+
+});
+
+document.querySelector("#wit").addEventListener('click',()=>{
+  
+  document.querySelector(".wcn1").innerHTML=document.querySelector("#wn1").value +"**";
+ 
+  document.querySelector(".wcn2").innerHTML=document.querySelector("#wn2").value +"**";
+ document.querySelector(".wcn3").innerHTML=document.querySelector("#wn3").value +"**";
+ document.querySelector(".wcn4").innerHTML=document.querySelector("#wn4").value +"**";
+ document.querySelector(".wcn1").innerHTML=document.querySelector("#wn1").value +"**";
+ document.querySelector(".wcn5").innerHTML=document.querySelector("#wn5").value +"**";
+ 
+ document.querySelector("#wca1").innerHTML="$" + document.querySelector("#wa1").value + ".00";
+ 
+ document.querySelector("#wca2").innerHTML="$" + document.querySelector("#wa2").value + ".00";
+ 
+ document.querySelector("#wca3").innerHTML="$" + document.querySelector("#wa3").value + ".00";
+ 
+ 
+ document.querySelector("#wca4").innerHTML="$" + document.querySelector("#wa4").value + ".00";
+ 
+ 
+ document.querySelector("#wca5").innerHTML="$" + document.querySelector("#wa5").value + ".00";
+ 
+});
+  </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <!-- Github buttons -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script src="app.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
